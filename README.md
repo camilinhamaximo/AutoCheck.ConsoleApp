@@ -1,0 +1,2 @@
+Foi criado no VSCode, a pasta principal contendo as subdivisões para o projeto, onde inicialmente inseri a pasta "Models" e "Program.cs". 
+De início, como estava tendo problemas com o meu terminal para associar ao projeto, reinicializei com a criação da pasta DevDotnet, inserindo em seguida as pastas "Models" e "Program.cs". Cometi o erro de colocar o meu terminal associado ao meu computador e não em uma fração menor, onde assim que percebi a falha, corrigi com o passo já citado anteriormente.
