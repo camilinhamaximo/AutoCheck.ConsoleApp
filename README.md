@@ -1,1 +1,39 @@
+   A arquitetura cliente servidor é caracterizado pela aplicação em que um programa de computador - cliente, solicita a requisição de outro programa, denominado de servidor, onde, este processa a solicitação retornando com as informações e/ou recursos solicitados. O Mini Projeto SCTEC, pode ser caracterizado por esta aplicação, mas com a ressalva de que, o próprio programa executa localmente o processamento da vistoria.
+   
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Links da apresentação em vídeo: <https://www.youtube.com/watch?v=lGawFK92XEY>;
+                                <https://drive.google.com/file/d/1akiyhhgCglZ_xGRVA7C8Nk6FUFD3DWDH/view?usp=sharing>.
 
