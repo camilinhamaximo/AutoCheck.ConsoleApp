@@ -1,37 +1,30 @@
-   A arquitetura cliente servidor é caracterizado pela aplicação em que um programa de computador - cliente, solicita a requisição de outro programa, denominado de servidor, onde, este processa a solicitação retornando com as informações e/ou recursos solicitados. O Mini Projeto SCTEC, pode ser caracterizado por esta aplicação, mas com a ressalva de que, o próprio programa executa localmente o processamento da vistoria.
-   
+       A arquitetura cliente servidor é caracterizado pela aplicação em que um programa de computador - cliente, solicita a requisição de outro programa, denominado de servidor, onde, este processo de solicitação retorna com as informações e/ou recursos solicitados. O Mini Projeto SCTEC, pode ser caracterizado por esta aplicação, mas com a ressalva de que, o próprio programa executa localmente o processamento da vistoria, e não através de um sistema de rede.
+       Visando viabilizar, sistematizar e automatizar um método, o AutoCheck.ConsoleApp possui o intuito de realizar uma vistoria técnica veicular, através de um checklist, com os requisitos disponibilizados por este, tendo a aplicação para carro, moto e caminhão. Ao término da vistoria, é disponibilizado através de pontuações, a qualidade veicular, apontando se há necessidade de melhorias, o que precisa melhorar, bem como da porcentagem da qualidade deste. Ao encerrar a análise, o sistema pode emitir um relatório com as vistorias anteriores realizadas, disponibilizadas pela ordem de aplicação.
+      O conteúdo exposto no módulo 1 se faz inteiramente presente no desenvolvimento da atividade do Mini Projeto, sendo dispostos os  POO: encapsulamento - {get; set;}; herança - : ; polimorfismo - virtual, override e abstração; aplicação de console desenvolvida em C# e .NET; uso de tipos primitivos - string, int, double; listas - List<T>; estruturas condicionais - if/else/if..else; laços de repetição - foreach; classes e objetos; construtores; métodos; entrada e saída de dados pelo console - AutoCheck.ConsoleApp.Models e AutoCheck.ConsoleApp.Services; cálculos matemáticos - pontuação e percentual; organizaÇão em camadas - Models e Services e o repositório Git/GitHub.
+      AutoCheck.ConsoleApp é composto por uma pasta geral - AutoCheck.ConsoleApp, que é subdivido em subpastas - Models (ItemVistoria; Veiculo; Carro, Moto, Caminhão), Program - Program.cs e Services - MotorVistoria.
+      Models:
+     
+      - ItemVistoria: caminho de aplicação - namespace AutoCheck.ConsoleApp.Models; classe; objeto; propriedades; construtor; parâmetros; estrutura condicional - if; validação de dados - ; encapsulamento - {gel; set;}; exceção - ArgumentException;
 
+      -Veiculo: biblioteca - using System.Collections.Generic; namespace -  AutoCheck.ConsoleApp.Models; variáveis; tipos primitivos - string / int / double; listas - Lista<T>; métodos - AdicionarItemVistoriado() e ObterChecklistObrigatorio(); construtores - Veiculo (...) ; classe - Veiculo; encapsulamento - {get; set;}; herança - : ; parâmetros - marca, modelo, ano, quilometragem; polimorfismo -  virtual permite override nas subclasses; abstração	- abstract class Veiculo;
 
-   
+      -Carro: biblioteca - using System.Collections.Generic; namespace -  AutoCheck.ConsoleApp.Models; classe - Carro; herança - Carro : Veiculo; encapsulamento - QuantidadePortas { get; set; }; tipo primitivo	- int, string, double; construtor - Carro; parâmetros - marca, modelo, ano,...; base - marca, modelo, ano, quilometragem; método - ObterChecklistObrigatorio(); polimorfismo - override; listas	- List<string>;
 
+      -Moto: biblioteca - using System.Collections.Generic; namespace -  AutoCheck.ConsoleApp.Models; classe - Moto; herança	- Moto : Veiculo; encapsulamento	- Cilindradas { get; set; }; tipos primitivos - string, int, double; construtor - Moto; parâmetros - 	marca, modelo, ano,...; base - marca, modelo, ano, quilometragem; método - ObterChecklistObrigatorio(); polimorfismo - override; lista - List<string>;
 
+      -Caminhão: biblioteca - using System.Collections.Generic; namespace -  AutoCheck.ConsoleApp.Models; classe - Caminhao; herança - Caminhao : Veiculo; encapsulamento - { get; set; }; tipos primitivos - string, int, double; construtor	-Caminhao; parâmetros - marca, modelo, ano,...; base - marca, modelo, ano, quilometragem; métodos - ObterChecklistObrigatorio(); polimorfismo - override; listas - List<string>;
 
+      Program:
+     
+      - Program.cs: namespace - using AutoCheck.ConsoleApp.Models e using AutoCheck.ConsoleApp.Services; entrada de dados — Console.ReadLine(); saída de dados — Console.WriteLine(); variáveis; tipos primitivos - string, int, double - listas - List<>; objetos; criação de objetos - new; condicionais - if/else/else..if; laços - do/while / foreach /while; construtores; herança/polimorfismo — através de Veiculo, Carro, Moto e Caminhao; cálculos; conversão de tipos com Parse; validação de dados; relatório; armazenamento em memória; validação de dados; chamadas de métodos;
 
+      Services:
+      
+      - MotorVistoria: biblioteca - using System.Collections.Generic; namespace -  AutoCheck.ConsoleApp.Models; classe - MotorVistoria; métodos - exe.: CalcularPontuacao(), CalcularPercentual(), ...; tipos primitivos - int, double, bool, string; parâmetros - Veiculo veiculo, double percentual; laços de repetição - foreach; condicionais - if/else/else..if; listas - VistoriaRealizada; objetos - ItemVistoria, Veiculo, Carro, Moto, Caminhao; conversão - (double)pontuacaoObtida ( foi aplicado o double para disponibilizar valores percentuais, sem ocorrer erro na divisão; e permitindo que o zero não entre como erro no programa); operadores matemáticos - +, *, /; operadores de comparação -	==, >=; operadores lógicos; saída de dados - Console.WriteLine();
+método privado - ObterRecomendacao() e interpolação de strings - 	$"Atributo Específico:...".
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      O AutoCheck.ConsoleApp, pode ser visualizado pelo terminal e/ou Visual Studio Code. Pressupõe-se que, o seu computador seja MacBook, assim como o meu, é necessário validar o dotnet - link <https://dotnet.microsoft.com/pt-br/>, de acordo com a sua máquina. Inicia-se o terminal, gosto de verificar a versão para ver se está apto neste - dotnet --version; em seguida aplicar %pwd, vai aparecer o nome do seu user, inserir %cd AutoCheck.ConsoleApp > dotnet run e o seu programa irá acontecer. Pode ser utilizado também o Visual Studio Code, onde você irá em File > Open > DevDonet (o local onde está armazenado o seu arquivo).
+      Como metodologia de estudo, dediquei mais tempo aos temas nos quais apresentava maior dificuldade, buscando apoio por meio de ferramentas de Inteligência Artificial, além da orientação de amigos que já atuam como desenvolvedores. Esse suporte tem sido de grande importância ao longo da minha jornada de aprendizagem, inclusive no desenvolvimento deste projeto, no qual pude contar com auxílio para identificar e corrigir erros no código. Em relação ao C#, este projeto representou meu primeiro contato mais aprofundado com a linguagem. Inicialmente, tive algumas dificuldades para compreender sua estrutura e aplicação, mas, ao longo do desenvolvimento, fui adquirindo maior familiaridade e confiança. Anteriormente, já havia estudado a linguagem C++ durante a graduação, o que contribuiu para a compreensão de alguns conceitos, principalmente os laços de repetição e as estruturas condicionais.
 
 
 Links da apresentação em vídeo: <https://www.youtube.com/watch?v=lGawFK92XEY>;
